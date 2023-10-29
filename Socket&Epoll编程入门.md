@@ -67,7 +67,7 @@ recv(sock, buffer, 128, 0);
 ``` cpp
 size_t ret = 0;
 while (ret < len) {
-    size_t b = send(sock, buffer + ret, len - ret, 0);
+    ssize_t b = send(sock, buffer + ret, len - ret, 0);
     if (b == 0) printf("socket Closed"); // 当连接断开
     if (b < 0) printf("Error ?"); // 这里可能发生了一些意料之外的情况
     ret += b; // 成功将b个byte塞进了缓冲区
