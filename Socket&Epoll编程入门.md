@@ -89,7 +89,7 @@ while (ret < len) {
 
 1. 为每一个socket开一个线程
 2. 使用ics课程中教的`select`函数，去轮询所有的socket哪些可读了
-3. 使用epoll
+3. 使用epoll (需要 Linux-based Docker )
 
 **为什么不使用方法1**
 
